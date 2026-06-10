@@ -19,10 +19,10 @@ export default function GeneralInfo() {
               </div>
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-light text-justify">
                 <p className="border-l-4 border-[#00E5FF] pl-4">
-                  El presente dossier consolida un análisis crítico y exhaustivo sobre el impacto de las Tecnologías de la Información y la Comunicación en el sistema educativo contemporáneo, donde se aborda la evolución histórica de las telecomunicaciones y su confrontación directa con la realidad socioeconómica y la profunda brecha digital existente en El Salvador
+                  El presente dossier consolida un análisis crítico y exhaustivo sobre el impacto de las Tecnologías de la Información y la Comunicación en el sistema educativo contemporáneo, donde se aborda la evolución histórica de las telecomunicaciones y su confrontación directa con la realidad socioeconómica y la profunda brecha digital existente en El Salvador.
                 </p>
                 <p className="border-l-4 border-[#00E5FF] pl-4">
-                  A través de esta investigación se busca desmitificar la ilusión de la modernidad tecnológica que prioriza la adquisición de equipos sobre la verdadera planificación didáctica, el propósito fundamental es fomentar una transformación pedagógica que coloque la inclusión y el desarrollo del pensamiento crítico por encima del simple uso instrumental de la virtualidad
+                  A través de esta investigación se busca desmitificar la ilusión de la modernidad tecnológica que prioriza la adquisición de equipos sobre la verdadera planificación didáctica, el propósito fundamental es fomentar una transformación pedagógica que coloque la inclusión y el desarrollo del pensamiento crítico por encima del simple uso instrumental de la virtualidad.
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ export default function GeneralInfo() {
               </div>
               
               <p className="text-xl text-gray-400 italic leading-relaxed font-serif relative z-10">
-                "Analizar críticamente la integración de las herramientas tecnológicas y de telecomunicación en los entornos formativos, proponiendo estrategias pedagógicas innovadoras que enfrenten las desigualdades estructurales y promuevan un aprendizaje verdaderamente significativo, inclusivo y ético en el contexto nacional"
+                "Analizar críticamente la integración de las herramientas tecnológicas y de telecomunicación en los entornos formativos, proponiendo estrategias pedagógicas innovadoras que enfrenten las desigualdades estructurales y promuevan un aprendizaje verdaderamente significativo, inclusivo y ético en el contexto nacional."
               </p>
             </div>
 

@@ -4,6 +4,8 @@ import MagazineHero from './components/layout/MagazineHero';
 import MagazineIndex from './components/layout/MagazineIndex';
 import GeneralInfo from './components/notes/GeneralInfo';
 import Unit1Card from './components/notes/Unit1Card';
+import Unit2Card from './components/notes/Unit2Card';
+import Unit3Card from './components/notes/Unit3Card';
 import Footer from './components/layout/Footer';
 
 export default function App() {
@@ -37,12 +39,11 @@ export default function App() {
           {/* Unidad 1: Revolución Industrial */}
           <Unit1Card onOpenPdf={setActivePdf} />
 
-          {/* Espacio reservado para la Unidad 2 */}
-          <div className="text-center py-20 border-2 border-dashed border-gray-800 rounded-2xl mt-12">
-            <h3 className="text-2xl text-gray-400 font-light">
-              [Zona lista para integrar el diseño interactivo de la Unidad 2]
-            </h3>
-          </div>
+        {/* Unidad 2: Impacto Histórico y Brecha Tecnológica */}
+          <Unit2Card onOpenPdf={setActivePdf} />  
+
+        {/* Unidad 3: Competencias Digitales y Crisis de la Memorización */}
+          <Unit3Card onOpenPdf={setActivePdf} />
 
         </Suspense>
       </main>

@@ -43,7 +43,7 @@ export default function Unit1Card({ onOpenPdf }) {
                 <h3 className="text-2xl font-bold text-white tracking-wide">Art. 01: La Primera Revolución</h3>
               </div>
               <p className="text-gray-400 leading-relaxed text-justify font-light text-lg">
-                Desde una perspectiva técnica e histórica, se detalla cómo la Primera Revolución Industrial, iniciada a finales del siglo XVIII, sentó las bases de la mecanización mediante el uso de maquinaria impulsada por agua y vapor
+                Desde una perspectiva técnica e histórica, se detalla cómo la Primera Revolución Industrial, iniciada a finales del siglo XVIII, sentó las bases de la mecanización mediante el uso de maquinaria impulsada por agua y vapor.
               </p>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function Unit1Card({ onOpenPdf }) {
                 <h3 className="text-2xl font-bold text-white tracking-wide">Art. 02: Producción en Masa</h3>
               </div>
               <p className="text-gray-400 leading-relaxed text-justify font-light text-lg">
-                Posteriormente, la Segunda Revolución Industrial, a finales del siglo XIX, transformó radicalmente las industrias con la llegada de la electricidad y la producción en masa
+                Posteriormente, la Segunda Revolución Industrial, a finales del siglo XIX, transformó radicalmente las industrias con la llegada de la electricidad y la producción en masa.
               </p>
             </div>
           </div>
