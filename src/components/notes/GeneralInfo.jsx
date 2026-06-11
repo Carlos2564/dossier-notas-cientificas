@@ -15,7 +15,7 @@ export default function GeneralInfo() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <BookOpenText className="text-[#00E5FF] w-8 h-8" />
-                <h2 className="text-3xl font-black text-white uppercase tracking-tight">El Contexto</h2>
+                <h2 className="text-3xl font-black text-white uppercase tracking-tight">Introducción</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
