@@ -11,19 +11,27 @@ export default function GeneralInfo() {
           {/* Columna Izquierda: Introducción y Objetivos */}
           <div className="lg:col-span-8 space-y-12">
             
-            {/* Introducción */}
+            {/* Introducción con Imagen 2 Intercalada */}
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <BookOpenText className="text-[#00E5FF] w-8 h-8" />
-                <h2 className="text-3xl font-black text-white uppercase tracking-tight">Introducción General</h2>
+                <h2 className="text-3xl font-black text-white uppercase tracking-tight">El Contexto</h2>
               </div>
-              <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-light text-justify">
-                <p className="border-l-4 border-[#00E5FF] pl-4">
-                  El presente dossier consolida un análisis crítico y exhaustivo sobre el impacto de las Tecnologías de la Información y la Comunicación en el sistema educativo contemporáneo, donde se aborda la evolución histórica de las telecomunicaciones y su confrontación directa con la realidad socioeconómica y la profunda brecha digital existente en El Salvador.
-                </p>
-                <p className="border-l-4 border-[#00E5FF] pl-4">
-                  A través de esta investigación se busca desmitificar la ilusión de la modernidad tecnológica que prioriza la adquisición de equipos sobre la verdadera planificación didáctica, el propósito fundamental es fomentar una transformación pedagógica que coloque la inclusión y el desarrollo del pensamiento crítico por encima del simple uso instrumental de la virtualidad.
-                </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div className="space-y-6 text-gray-300 text-lg leading-relaxed font-light text-justify">
+                  <p>
+                    El presente dossier consolida un análisis crítico y exhaustivo sobre el impacto de las Tecnologías de la Información y la Comunicación en el sistema educativo contemporáneo, donde se aborda la evolución histórica de las telecomunicaciones y su confrontación directa con la realidad socioeconómica y la profunda brecha digital existente en El Salvador.
+                  </p>
+                  <p>
+                    A través de esta investigación se busca desmitificar la ilusión de la modernidad tecnológica que prioriza la adquisición de equipos sobre la verdadera planificación didáctica, el propósito fundamental es fomentar una transformación pedagógica que coloque la inclusión y el desarrollo del pensamiento crítico por encima del simple uso instrumental de la virtualidad.
+                  </p>
+                </div>
+                {/* Imagen 2 de la compañera */}
+                <div className="relative group rounded-2xl overflow-hidden border border-gray-800 bg-[#050b14] p-4">
+                   <img src="/2.svg" alt="Evolución Telecomunicaciones" className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700" />
+                   <p className="text-center text-xs text-gray-500 mt-2 uppercase tracking-tighter">Infraestructura Histórica</p>
+                </div>
               </div>
             </div>
 
@@ -34,11 +42,9 @@ export default function GeneralInfo() {
                 <Target className="w-48 h-48 text-[#00E5FF]" />
               </div>
               
-              <div className="flex items-center gap-3 mb-4">
-                <Target className="text-[#00E5FF] w-6 h-6" />
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider">Objetivo General</h3>
-              </div>
-              
+              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider flex items-center gap-2">
+                <Target className="text-[#00E5FF] w-5 h-5" /> Objetivo General
+              </h3>
               <p className="text-xl text-gray-400 italic leading-relaxed font-serif relative z-10">
                 "Analizar críticamente la integración de las herramientas tecnológicas y de telecomunicación en los entornos formativos, proponiendo estrategias pedagógicas innovadoras que enfrenten las desigualdades estructurales y promuevan un aprendizaje verdaderamente significativo, inclusivo y ético en el contexto nacional."
               </p>
@@ -46,36 +52,27 @@ export default function GeneralInfo() {
 
           </div>
 
-          {/* Columna Derecha: Palabras Clave */}
-          <div className="lg:col-span-4">
-            <div className="sticky top-8 bg-[#121a25] p-8 rounded-2xl border border-gray-800">
+          {/* Columna Derecha: Palabras Clave e Imagen 4 */}
+          <div className="lg:col-span-4 space-y-8">
+            <div className="bg-[#121a25] p-8 rounded-2xl border border-gray-800">
               <div className="flex items-center gap-3 mb-6 border-b border-gray-800 pb-4">
                 <KeyRound className="text-[#00E5FF] w-6 h-6" />
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider">Palabras Clave</h3>
               </div>
-              
               <div className="flex flex-wrap gap-3">
-                {[
-                  "Telecomunicaciones Educativas", 
-                  "Brecha Digital", 
-                  "Competencias Digitales", 
-                  "Inclusión Tecnológica", 
-                  "Innovación Pedagógica", 
-                  "Educación Salvadoreña"
-                ].map((keyword, idx) => (
-                  <span 
-                    key={idx} 
-                    className="bg-[#0a0f16] text-gray-300 px-4 py-2 rounded-lg text-sm font-medium border border-gray-700 hover:border-[#00E5FF] hover:text-[#00E5FF] transition-all cursor-default"
-                  >
-                    {keyword}
-                  </span>
+                {["Telecomunicaciones", "Brecha Digital", "Inclusión", "Innovación", "Ética"].map((k, i) => (
+                  <span key={i} className="bg-[#0a0f16] text-gray-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-gray-700">{k}</span>
                 ))}
               </div>
+            </div>
+
+            {/* Imagen 4 de la compañera */}
+            <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-lg group">
+               <img src="/4.svg" alt="Conectividad Global" className="w-full h-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );

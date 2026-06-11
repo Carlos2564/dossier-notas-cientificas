@@ -6,6 +6,10 @@ import GeneralInfo from './components/notes/GeneralInfo';
 import Unit1Card from './components/notes/Unit1Card';
 import Unit2Card from './components/notes/Unit2Card';
 import Unit3Card from './components/notes/Unit3Card';
+import Unit4Card from './components/notes/Unit4Card';
+import Unit5Card from './components/notes/Unit5Card';
+import Unit6Card from './components/notes/Unit6Card';
+import FinalConclusions from './components/notes/FinalConclusions';
 import Footer from './components/layout/Footer';
 
 export default function App() {
@@ -45,9 +49,20 @@ export default function App() {
         {/* Unidad 3: Competencias Digitales y Crisis de la Memorización */}
           <Unit3Card onOpenPdf={setActivePdf} />
 
+          {/* Unidad 4: Videoconferencia y Virtualidad Forzada */}
+          <Unit4Card onOpenPdf={setActivePdf} />
+
+          {/* Unidad 5: Transformación Digital y Futuro Laboral */}
+          <Unit5Card onOpenPdf={setActivePdf} />
+
+          {/* Unidad 6: Impacto de la Inteligencia Artificial */}
+          <Unit6Card onOpenPdf={setActivePdf} />
+
         </Suspense>
       </main>
 
+{/* CIERRE DEL DOSSIER */}
+      <FinalConclusions />
       {/* 5. Pie de página */}
       <Footer />
 

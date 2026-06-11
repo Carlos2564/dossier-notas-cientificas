@@ -1,71 +1,70 @@
 import React from 'react';
-import { Lightbulb, CheckCircle2 } from 'lucide-react';
+import { Lightbulb, CheckCircle2, Award } from 'lucide-react';
 
 export default function FinalConclusions() {
   return (
-    <section className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mt-12 mb-8">
+    <section className="bg-[#0a0f16] py-20 border-t border-gray-800 relative overflow-hidden">
       
-      <div className="bg-[#0F2537] p-8 border-t-4 border-[#D4AF37]">
-        <h2 className="text-3xl font-serif font-bold text-white mb-2">
-          Síntesis Final
-        </h2>
-        <p className="text-gray-300 font-medium">
-          Conclusiones y líneas de acción recomendadas
-        </p>
-      </div>
+      {/* Luces ambientales de cierre */}
+      <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-[#00E5FF]/5 to-transparent pointer-events-none"></div>
 
-      <div className="p-8 space-y-10">
+      <div className="container mx-auto px-6 max-w-7xl relative z-10">
         
-        {/* Conclusiones Generales */}
-        <div>
-          <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
-            <CheckCircle2 className="text-green-600 w-6 h-6" />
-            <h3 className="text-xl font-semibold text-[#0F2537]">Conclusiones Generales</h3>
-          </div>
-          <div className="space-y-4">
-            <div className="flex gap-4 items-start">
-              <div className="w-2 h-2 rounded-full bg-[#004AAD] mt-2 shrink-0"></div>
-              <p className="text-gray-700 leading-relaxed text-justify">La integración de la tecnología en el aula carece de valor educativo si no está respaldada por una planificación pedagógica sólida y centrada en las verdaderas necesidades del estudiante.</p>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-2 h-2 rounded-full bg-[#004AAD] mt-2 shrink-0"></div>
-              <p className="text-gray-700 leading-relaxed text-justify">La virtualidad forzada y la implementación de videoconferencias evidenciaron que la brecha digital no es solo un problema de infraestructura técnica sino un factor de profunda exclusión social y económica.</p>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-2 h-2 rounded-full bg-[#004AAD] mt-2 shrink-0"></div>
-              <p className="text-gray-700 leading-relaxed text-justify">El enfoque tradicional de memorización mecánica ha quedado obsoleto ante el acceso inmediato a la información, exigiendo una transición urgente hacia el desarrollo del pensamiento crítico y la resolución de problemas.</p>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-2 h-2 rounded-full bg-[#004AAD] mt-2 shrink-0"></div>
-              <p className="text-gray-700 leading-relaxed text-justify">El éxito de la modernización educativa recae en la evolución del rol docente, quien debe transformarse en un guía ético capaz de enseñar habilidades digitales fundamentales y no solo destrezas instrumentales.</p>
-            </div>
-          </div>
+        {/* Título de Cierre */}
+        <div className="text-center mb-20">
+          <Award className="text-[#00E5FF] w-12 h-12 mx-auto mb-4 animate-bounce" />
+          <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+            <span className="text-[#00E5FF]"></span>
+          </h2>
+          <div className="h-1 w-24 bg-[#00E5FF] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Recomendaciones */}
-        <div>
-          <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
-            <Lightbulb className="text-yellow-500 w-6 h-6" />
-            <h3 className="text-xl font-semibold text-[#0F2537]">Recomendaciones</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          {/* Recomendaciones (Imagen 3) */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-4 border-b border-gray-800 pb-4">
+              <Lightbulb className="text-yellow-400 w-8 h-8" />
+              <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Recomendaciones</h3>
+            </div>
+            
+            <div className="relative rounded-3xl overflow-hidden border border-gray-800 bg-[#050b14] mb-8 group">
+              <img src="/3.svg" alt="Mundo Digital" className="w-full h-64 object-contain transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+
+            <ul className="space-y-6 text-gray-300 text-lg font-light leading-relaxed">
+              <li className="flex gap-4">
+                <span className="text-[#00E5FF] font-bold">01.</span>
+                <p className="text-justify">Se recomienda priorizar la inversión en infraestructura tecnológica equitativa, especialmente en los sectores más vulnerables de El Salvador, para garantizar que el acceso a la información no sea un privilegio sino un derecho ciudadano fundamental.</p>
+              </li>
+              <li className="flex gap-4">
+                <span className="text-[#00E5FF] font-bold">02.</span>
+                <p className="text-justify">Es imperativo transformar los planes de capacitación docente hacia un modelo de competencias digitales críticas, donde el profesorado no solo aprenda a usar herramientas sino a diseñar experiencias de aprendizaje significativas y éticas.</p>
+              </li>
+            </ul>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-              <p className="text-gray-800 font-medium mb-2">1. Priorizar Inclusión</p>
-              <p className="text-sm text-gray-600 text-justify">Garantizar políticas públicas que provean conectividad y recursos tecnológicos gratuitos para estudiantes en zonas rurales y sectores de alta vulnerabilidad económica.</p>
+
+          {/* Conclusiones (Imagen 1) */}
+          <div className="space-y-8">
+            <div className="flex items-center gap-4 border-b border-gray-800 pb-4">
+              <CheckCircle2 className="text-emerald-400 w-8 h-8" />
+              <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Conclusiones</h3>
             </div>
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-              <p className="text-gray-800 font-medium mb-2">2. Capacitación Docente</p>
-              <p className="text-sm text-gray-600 text-justify">Implementar programas de formación continua para el profesorado enfocados en metodologías activas y en la gestión pedagógica de entornos virtuales.</p>
+
+            <div className="relative rounded-3xl overflow-hidden border border-gray-800 bg-[#050b14] mb-8 group">
+              <img src="/1.svg" alt="Rompecabezas Cognitivo" className="w-full h-64 object-contain transform group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-              <p className="text-gray-800 font-medium mb-2">3. Transformar la Evaluación</p>
-              <p className="text-sm text-gray-600 text-justify">Sustituir las pruebas tradicionales de memorización por métodos de evaluación formativa que valoren la aplicación práctica del conocimiento y la argumentación.</p>
-            </div>
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-              <p className="text-gray-800 font-medium mb-2">4. Fomentar Habilidades Críticas</p>
-              <p className="text-sm text-gray-600 text-justify">Integrar en todos los niveles curriculares actividades orientadas al análisis de la información, evitando que el alumno sea un simple consumidor pasivo de tecnología.</p>
+
+            <div className="bg-[#121a25] p-8 rounded-2xl border border-gray-800 shadow-inner">
+              <p className="text-gray-300 text-lg font-light leading-relaxed text-justify">
+                Finalmente se concluye que la verdadera integración de las telecomunicaciones en la educación requiere superar el enfoque instrumentalista y memorístico para abrazar una pedagogía que desarrolle el pensamiento crítico y la capacidad de resolver problemas en entornos de incertidumbre digital.
+              </p>
+              <p className="text-gray-300 text-lg font-light leading-relaxed text-justify mt-6">
+                El éxito de la modernización educativa no reside en la sofisticación de los dispositivos instalados en los centros escolares, sino en la capacidad del sistema para reducir las desigualdades estructurales y formar ciudadanos con competencias digitales sólidas y responsables ante los desafíos de la sociedad del conocimiento.
+              </p>
             </div>
           </div>
+
         </div>
 
       </div>
