@@ -46,7 +46,7 @@ export default function GeneralInfo() {
                 <Target className="text-[#00E5FF] w-5 h-5" /> Objetivo General
               </h3>
               <p className="text-xl text-gray-400 italic leading-relaxed font-serif relative z-10">
-                "Analizar críticamente la integración de las herramientas tecnológicas y de telecomunicación en los entornos formativos, proponiendo estrategias pedagógicas innovadoras que enfrenten las desigualdades estructurales y promuevan un aprendizaje verdaderamente significativo, inclusivo y ético en el contexto nacional."
+                "Despertar el interés y la reflexión analítica de los estudiantes universitarios a través de un producto científico que evalúa críticamente la integración de las herramientas tecnológicas y de telecomunicación en los entornos formativos, proponiendo estrategias pedagógicas innovadoras que enfrenten las desigualdades estructurales y promuevan un aprendizaje verdaderamente significativo, inclusivo y ético en el contexto nacional."
               </p>
             </div>
 

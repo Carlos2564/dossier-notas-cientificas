@@ -15,7 +15,6 @@ import Footer from './components/layout/Footer';
 export default function App() {
   const [activePdf, setActivePdf] = useState(null);
 
-  // Bloquear el scroll del fondo cuando el modal esté abierto
   useEffect(() => {
     if (activePdf) {
       document.body.style.overflow = 'hidden';
@@ -27,51 +26,62 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0a0f16] font-sans text-gray-200 selection:bg-[#00E5FF] selection:text-black relative">
       
-      {/* 1. Portada Principal */}
       <MagazineHero />
-
-      {/* 2. Índice de Navegación */}
+      
       <MagazineIndex />
 
-      {/* 3. Contexto (Introducción, Objetivos, Palabras Clave) */}
-      <GeneralInfo />
+      {/* ANCLA 1: Generalidades */}
+      <div id="generalidades" className="scroll-mt-10">
+        <GeneralInfo />
+      </div>
 
-      {/* 4. Notas Científicas (Diseño Asimétrico) */}
-      <main className="container mx-auto px-6 py-20 max-w-7xl">
+      <main className="container mx-auto px-6 py-10 max-w-7xl">
         <Suspense fallback={<div className="text-center text-[#00E5FF] font-medium py-10 animate-pulse">Cargando repositorios...</div>}>
           
-          {/* Unidad 1: Revolución Industrial */}
-          <Unit1Card onOpenPdf={setActivePdf} />
+          {/* ANCLA 2: Unidad 1 */}
+          <div id="unidad1" className="scroll-mt-10">
+            <Unit1Card onOpenPdf={setActivePdf} />
+          </div>
 
-        {/* Unidad 2: Impacto Histórico y Brecha Tecnológica */}
-          <Unit2Card onOpenPdf={setActivePdf} />  
+          {/* ANCLA 3: Unidad 2 */}
+          <div id="unidad2" className="scroll-mt-10">
+            <Unit2Card onOpenPdf={setActivePdf} />
+          </div>
 
-        {/* Unidad 3: Competencias Digitales y Crisis de la Memorización */}
-          <Unit3Card onOpenPdf={setActivePdf} />
+          {/* ANCLA 4: Unidad 3 */}
+          <div id="unidad3" className="scroll-mt-10">
+            <Unit3Card onOpenPdf={setActivePdf} />
+          </div>
 
-          {/* Unidad 4: Videoconferencia y Virtualidad Forzada */}
-          <Unit4Card onOpenPdf={setActivePdf} />
+          {/* ANCLA 5: Unidad 4 */}
+          <div id="unidad4" className="scroll-mt-10">
+            <Unit4Card onOpenPdf={setActivePdf} />
+          </div>
 
-          {/* Unidad 5: Transformación Digital y Futuro Laboral */}
-          <Unit5Card onOpenPdf={setActivePdf} />
+          {/* ANCLA 6: Unidad 5 */}
+          <div id="unidad5" className="scroll-mt-10">
+            <Unit5Card onOpenPdf={setActivePdf} />
+          </div>
 
-          {/* Unidad 6: Impacto de la Inteligencia Artificial */}
-          <Unit6Card onOpenPdf={setActivePdf} />
+          {/* ANCLA 7: Unidad 6 */}
+          <div id="unidad6" className="scroll-mt-10">
+            <Unit6Card onOpenPdf={setActivePdf} />
+          </div>
 
         </Suspense>
       </main>
 
-{/* CIERRE DEL DOSSIER */}
-      <FinalConclusions />
-      {/* 5. Pie de página */}
+      {/* ANCLA 8: Conclusiones */}
+      <div id="conclusiones" className="scroll-mt-10">
+        <FinalConclusions />
+      </div>
+
       <Footer />
 
-      {/* Modal Visor de PDF (Diseño Premium Oscuro) */}
+      {/* Modal Visor de PDF */}
       {activePdf && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0f16]/90 p-4 sm:p-6 backdrop-blur-md transition-opacity">
           <div className="bg-[#121a25] w-full max-w-6xl h-[90vh] rounded-3xl overflow-hidden flex flex-col shadow-[0_0_40px_rgba(0,229,255,0.15)] border border-gray-800 animate-in fade-in zoom-in duration-300">
-            
-            {/* Barra superior del Modal */}
             <div className="bg-[#0a0f16] px-8 py-5 flex justify-between items-center border-b border-gray-800">
               <h3 className="text-white font-bold text-xl tracking-wide flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse"></span>
@@ -83,8 +93,7 @@ export default function App() {
                   download 
                   className="flex items-center gap-2 text-sm text-[#00E5FF] hover:text-white transition-colors font-medium"
                 >
-                  <Download className="w-5 h-5" />
-                  Descargar PDF
+                  <Download className="w-5 h-5" /> Descargar PDF
                 </a>
                 <button 
                   onClick={() => setActivePdf(null)} 
@@ -94,8 +103,6 @@ export default function App() {
                 </button>
               </div>
             </div>
-
-            {/* Contenedor del Iframe */}
             <div className="flex-grow bg-white w-full h-full relative">
               <iframe 
                 src={`/pdfs/${activePdf}`} 
@@ -103,7 +110,6 @@ export default function App() {
                 title="Visor PDF"
               />
             </div>
-            
           </div>
         </div>
       )}
